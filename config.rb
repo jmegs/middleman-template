@@ -6,6 +6,7 @@ set :css_dir, "assets/stylesheets"
 set :fonts_dir, "asssets/fonts"
 set :images_dir, "assets/images"
 set :js_dir, "assets/javascript"
+
 set :markdown,
   autolink: true,
   fenced_code_blocks: true,
@@ -14,7 +15,8 @@ set :markdown,
   smartypants: true,
   strikethrough: true,
   tables: true,
-  with_toc_data: true,
+  with_toc_data: true
+
 set :markdown_engine, :redcarpet
 
 page "/*.json", layout: false
