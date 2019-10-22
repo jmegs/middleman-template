@@ -34,5 +34,11 @@ configure :production do
   activate :minify_css
   activate :minify_html
   # remove if using js bundler
-  activate :minify_javascript
+  # activate :minify_javascript
 end
+
+activate :external_pipeline,
+  name: :bundle_javascript,
+  command: build? ? "yarn run build" : "yarn run start",
+  source: ".tmp/dist",
+  latency: 1

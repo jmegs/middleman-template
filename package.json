@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "parcel watch source/assets/javascript/main.js -d .tmp/dist/assets/javascript",
+    "build": "parcel build source/assets/javascript/main.js -d .tmp/dist/assets/javascript --no-content-hash"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "parcel-bundler": "latest"
+  }
+}
