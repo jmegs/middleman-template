@@ -34,11 +34,19 @@ configure :production do
   activate :minify_css
   activate :minify_html
   # remove if using js bundler
-  # activate :minify_javascript
+  activate :minify_javascript
 end
 
+ignore "*.scss"
+
 activate :external_pipeline,
-  name: :bundle_javascript,
-  command: build? ? "yarn run build" : "yarn run start",
-  source: ".tmp/dist",
-  latency: 1
+          name: :sass,
+          command: build? ? "bin/sass" : "bin/sass development",
+          source: ".tmp",
+          latency: 1
+          
+activate :external_pipeline,
+          name: :webpack,
+          command: build? ? "bin/webpack" : "bin/webpack development",
+          source: ".tmp",
+          latency: 1

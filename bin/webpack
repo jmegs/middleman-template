@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "development" ]; then
+	OPTIONS="--watch -d --mode=development --display=minimal"
+else
+	OPTIONS="--bail --mode=production"
+fi
+
+npx webpack $OPTIONS 

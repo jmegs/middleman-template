@@ -1,12 +1,15 @@
 {
-  "scripts": {
-    "start": "parcel watch source/assets/javascript/main.js -d .tmp/dist/assets/javascript",
-    "build": "parcel build source/assets/javascript/main.js -d .tmp/dist/assets/javascript --no-content-hash"
-  },
-  "browserslist": [
-    "defaults"
-  ],
   "devDependencies": {
-    "parcel-bundler": "latest"
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "babel-loader": "^8.1.0",
+    "parcel-bundler": "latest",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.26.8"
   }
 }

@@ -1,1 +1,2 @@
-console.log("👋 Hello from main.js")
+const sayHi = msg => `👋 ${msg}`
+console.log(sayHi("Hello from main.js"))
